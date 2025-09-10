@@ -1,0 +1,477 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #0074D9; /* azul similar da imagem */
+  padding: 2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  width: 100%;
+  min-height: 650px;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.hero-left, .hero-right {
+  flex: 1;
+}
+
+/* Imagem ocupa toda coluna esquerda */
+.hero-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Coluna do texto */
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+  background-color: #f5f8fa; /* fundo suave */
+}
+
+.hero-right h1 {
+  font-size: 4rem;
+  color: #0074D9;
+  line-height: 1.2;
+}
+
+/* Features Section (bloco azul) */
+.features {
+  background-color: #0090FF;
+  color: white;
+  padding: 3rem 0 0 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.features .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1px;
+  width: 100%;
+  margin: 0;
+}
+
+.features .feature {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  min-height: 220px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.features .feature:first-child {
+  border-left: none;
+}
+
+.features .feature h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Remodel Section */
+.remodel {
+  padding: 4rem 5%;
+  background-color: #fff;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.remodel-header h4 {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #7a7a7a;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.remodel-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.4;
+}
+
+.remodel-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.remodel-card {
+  flex: 1;
+  min-width: 280px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.remodel-card:hover {
+  transform: translateY(-5px);
+}
+
+.remodel-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.remodel-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.remodel-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.remodel-card button {
+  background-color: #5c3d2e;
+  color: white;
+  border: none;
+  padding: 0.6rem 2rem;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remodel-card button:hover {
+  background-color: #3a251b;
+}
+
+/* Serviços Section (bloco branco) */
+.services {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  border: 1px solid black;
+  margin: 0;
+  width: 100%;
+  height: 220px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.services-container > div {
+  border-left: 1px solid black;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Remove border left da primeira coluna */
+.services-container > div:first-child {
+  border-left: none;
+}
+
+/* Aumentando padding interno nas colunas 2, 3 e 4 */
+.col2, .col3, .col4 {
+  padding: 30px 25px !important;
+}
+
+.title-bold {
+  font-weight: 700;
+}
+
+.col1 .title-bold {
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.col2 .title-bold,
+.col3 .title-bold,
+.col4 .title-bold {
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.col2 p,
+.col3 p,
+.col4 p {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Specialists Section */
+.specialists {
+  background-color: #eeeeee;
+  padding: 3rem 5%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.specialists h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.specialists p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.specialists-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.specialist {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.specialist img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.specialist h3 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+}
+
+.specialist p {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Appointment Section */
+.appointment {
+  padding: 3rem 5%;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.appointment h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.appointment p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.appointment form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.appointment label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.appointment label span {
+  color: red;
+}
+
+.appointment input,
+.appointment textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 2rem;
+  outline: none;
+}
+
+.appointment input::placeholder,
+.appointment textarea::placeholder {
+  color: #999;
+}
+
+.appointment button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.75rem 2.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.appointment button:hover {
+  background-color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #0074D9;
+  color: white;
+  text-align: center;
+  padding: 1rem 5%;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* RESPONSIVE */
+
+/* Header stack on small screens */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  header nav {
+    margin-top: 1rem;
+  }
+  header nav a {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Hero section stack */
+  .hero {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .hero-left, .hero-right {
+    flex: none;
+    width: 100%;
+  }
+  .hero-right h1 {
+    font-size: 2.5rem;
+    padding: 2rem 1rem;
+  }
+
+  /* Features stack */
+  .features .container {
+    flex-direction: column;
+  }
+  .features .feature {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    min-height: auto;
+    padding: 1.5rem 1rem;
+  }
+  .features .feature:first-child {
+    border-top: none;
+  }
+
+  /* Remodel cards stack */
+  .remodel-cards {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .remodel-card {
+    min-width: 100%;
+  }
+
+  /* Services grid collapse to rows */
+  .services-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .services-container > div {
+    border-left: none;
+    border-top: 1px solid black;
+    padding: 20px 10px !important;
+  }
+  .services-container > div:first-child {
+    border-top: none;
+  }
+
+  /* Specialists stack */
+  .specialists-container {
+    flex-direction: column;
+  }
+  .specialist {
+    min-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  /* Appointment form width */
+  .appointment form {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
